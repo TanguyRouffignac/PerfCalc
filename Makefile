@@ -1,4 +1,4 @@
-CPPFLAGS = -g -Wall -Werror -std=c++11
+CFLAGS = -g -Wall -Werror -std=c99
 
 all: perfcalc
 
