@@ -16,4 +16,3 @@ int getProbability(int diff){
 	else
 		return (100 - readTable(- diff));
 }
-
