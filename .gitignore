@@ -1,2 +1,7 @@
 *.o
 perfcalc
+Matchs/
+Teams/
+scraper/
+mechanize*
+*.ods

@@ -127,7 +127,7 @@ int main(int argc, char * argv []){
 			int r = rand() % 200;
 			int proba = getProbability(opponents[j] - ratings[j]);
 			if (proba < 50){
-				if(r > proba){
+				if(r >= proba){
 					if(r < 3 * proba){
 						score += 1;
 					} else {
