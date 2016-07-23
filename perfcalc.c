@@ -107,7 +107,7 @@ int main(int argc, char * argv []){
 			printf("Score théorique	: %d.%d\n", theor / 100, theor % 100);
 		else
 			printf("Score théorique : %d.0%d\n", theor / 100, theor % 100);
-		printf("Performance : %d\n", getPerformance((float)sommeAdv/numbersimple));
+		printf("Performance : %d\n", getPerformance((float)sommeAdv/(numbersimple + numberdouble)));
 	}
 	int win = 0;
 	int draw = 0;
