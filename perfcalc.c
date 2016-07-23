@@ -44,13 +44,19 @@ int getPerformance(int average){
 			while(getTheoricalScore(attempt) >= result)
 				attempt --;
 			second = attempt;
-			if (first != second)
-				return((first + second - 1) / 2);
+			if (first != second){
+				if (getTheoricalScore(second) == result) {
+					return((first + second - 1) / 2);
+				}
+				else {
+					if((result - getTheoricalScore(second)) < (getTheoricalScore(first) - result))
+						return second;
+					else
+						return first;
+				}
+			}
 			else {
-				if((result - getTheoricalScore(second)) < (getTheoricalScore(first) - result))
-					return second;
-				else
-					return first;
+				return first;
 			}
 		}
 	} else {
@@ -60,13 +66,19 @@ int getPerformance(int average){
 		while(getTheoricalScore(attempt) <= result)
 			attempt ++;
 		second = attempt;
-		if (first != second)
-			return((first + second - 1) / 2);
+		if (first != second){
+			if (getTheoricalScore(second) == result) {
+				return((first + second - 1) / 2);
+			}
+			else {
+				if((result - getTheoricalScore(first)) > (getTheoricalScore(second) - result))
+					return second;
+				else
+					return first;
+			}
+		}
 		else {
-			if((result - getTheoricalScore(first)) > (getTheoricalScore(second) - result))
-				return second;
-			else
-				return first;
+			return first;
 		}
 	}
 }
