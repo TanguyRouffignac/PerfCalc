@@ -168,9 +168,18 @@ int main(int argc, char * argv []){
 	int th = total / 10000;
 	if (total % 10000 >= 5000)
 		th ++;
+	int w = win / 10000;
+	if (win % 10000 >= 5000)
+		w ++;
+	int d = draw / 10000;
+	if (draw % 10000 >= 5000)
+		d ++;
+	int l = loss / 10000;
+	if (loss % 10000 >= 5000)
+		l ++;
 	if (th % 100 >= 10)
-		printf("Pts de match théoriques (3/2/1) : %d.%d\n", th / 100, th % 100);
+		printf("Pts de match théoriques (3/2/1) : %d.%d (%d/%d/%d)\n", th / 100, th % 100, w, d, l);
 	else
-		printf("Pts de match théoriques (3/2/1) : %d.0%d\n", th / 100, th % 100);
+		printf("Pts de match théoriques (3/2/1) : %d.0%d (%d/%d/%d)\n", th / 100, th % 100, w, d, l);
 	return 0;
 }
